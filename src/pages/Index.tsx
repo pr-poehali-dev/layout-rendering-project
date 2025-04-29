@@ -1,25 +1,29 @@
 import React from 'react';
-import VinylRecord from '../components/VinylRecord';
 import ButtonLink from '../components/ButtonLink';
 
 const Index: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-hidden">
-      <main className="flex-grow flex flex-col md:flex-row items-center justify-between container mx-auto px-4 py-12">
-        <div className="relative -left-36 md:-left-20 lg:left-0 overflow-visible">
-          <VinylRecord />
-        </div>
-        
-        <div className="max-w-lg space-y-8 mt-4 md:mt-0">
-          <h2 className="text-3xl tracking-[0.2em] font-medium text-center md:text-left">
-            Candy Бобер
+    <div className="min-h-screen flex bg-white overflow-hidden relative">
+      {/* Изображение виниловой пластинки */}
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+        <img 
+          src="https://cdn.poehali.dev/files/54dee0f1-d48f-4b96-a16c-af3ca68b736a.png" 
+          alt="Виниловая пластинка" 
+          className="w-[550px] h-auto"
+        />
+      </div>
+      
+      <main className="flex-grow flex items-center justify-center">
+        <div className="max-w-lg space-y-8 px-4 text-center">
+          <h2 className="text-3xl tracking-[0.2em] font-medium">
+            C a n d y Б о б е р
           </h2>
           
-          <h1 className="text-5xl md:text-6xl font-black text-center md:text-left">
+          <h1 className="text-5xl md:text-6xl font-black">
             Найди свой звук!
           </h1>
           
-          <div className="flex flex-col sm:flex-row gap-4 mt-12 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 mt-12 justify-center">
             <ButtonLink href="/studios" outline>
               реп. точки
             </ButtonLink>
