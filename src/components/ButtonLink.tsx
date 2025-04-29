@@ -1,30 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface ButtonLinkProps {
   href: string;
-  outline?: boolean;
   children: React.ReactNode;
+  outline?: boolean;
 }
 
-const ButtonLink: React.FC<ButtonLinkProps> = ({ 
-  href, 
-  outline = false, 
-  children 
-}) => {
-  return outline ? (
-    <a 
-      href={href}
-      className="inline-block px-8 py-4 text-black border-2 border-dashed border-black rounded-full transition-all hover:bg-gray-100 text-xl font-medium"
+const ButtonLink: React.FC<ButtonLinkProps> = ({ href, children, outline = false }) => {
+  return (
+    <Link
+      to={href}
+      className={`
+        px-8 py-3 rounded-full text-lg font-medium transition-all duration-300
+        ${outline 
+          ? 'border-2 border-black border-dashed bg-transparent text-black hover:bg-black hover:text-white' 
+          : 'bg-red-600 text-white hover:bg-red-700'}
+      `}
     >
       {children}
-    </a>
-  ) : (
-    <a 
-      href={href}
-      className="inline-block px-8 py-4 bg-candy-red text-white rounded-full transition-all hover:bg-red-600 text-xl font-medium"
-    >
-      {children}
-    </a>
+    </Link>
   );
 };
 
