@@ -4,7 +4,7 @@ import ButtonLink from '../components/ButtonLink';
 const Index: React.FC = () => {
   return (
     <div className="min-h-screen flex bg-white overflow-hidden relative">
-      {/* Изображение виниловой пластинки */}
+      {/* Виниловая пластинка */}
       <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
         <img 
           src="https://cdn.poehali.dev/files/54dee0f1-d48f-4b96-a16c-af3ca68b736a.png" 
